@@ -1,0 +1,723 @@
+{
+  "files": {
+    "annotations.json": {
+      "invalid_boxes": [
+        {
+          "index": 371,
+          "id": 371,
+          "image_id": 109,
+          "bbox": [
+            1003.0,
+            -1.0,
+            787.0,
+            411.0
+          ]
+        },
+        {
+          "index": 387,
+          "id": 387,
+          "image_id": 112,
+          "bbox": [
+            1408.0,
+            -1.0,
+            369.0,
+            471.0
+          ]
+        },
+        {
+          "index": 707,
+          "id": 707,
+          "image_id": 209,
+          "bbox": [
+            0.0,
+            -1.0,
+            1352.0,
+            2364.0
+          ]
+        },
+        {
+          "index": 859,
+          "id": 859,
+          "image_id": 278,
+          "bbox": [
+            -1.0,
+            366.0,
+            198.0,
+            307.0
+          ]
+        },
+        {
+          "index": 1621,
+          "id": 1621,
+          "image_id": 457,
+          "bbox": [
+            799.0,
+            -1.0,
+            492.0,
+            484.0
+          ]
+        },
+        {
+          "index": 1777,
+          "id": 1777,
+          "image_id": 549,
+          "bbox": [
+            171.03125,
+            -1.3166667,
+            518.35625,
+            413.4333367
+          ]
+        },
+        {
+          "index": 2186,
+          "id": 2186,
+          "image_id": 679,
+          "bbox": [
+            1311.0,
+            -0.5,
+            286.0,
+            589.0
+          ]
+        }
+      ],
+      "duplicate_ids": [
+        {
+          "index": 309,
+          "id": 309,
+          "image_id": 101
+        },
+        {
+          "index": 4040,
+          "id": 4040,
+          "image_id": 1300
+        }
+      ]
+    },
+    "annotations_unofficial.json": {
+      "invalid_boxes": [
+        {
+          "index": 107,
+          "id": 107,
+          "image_id": 53,
+          "bbox": [
+            Infinity,
+            Infinity,
+            -Infinity,
+            -Infinity
+          ]
+        },
+        {
+          "index": 432,
+          "id": 432,
+          "image_id": 229,
+          "bbox": [
+            1448.0,
+            -1.0,
+            120.0,
+            102.0
+          ]
+        },
+        {
+          "index": 563,
+          "id": 563,
+          "image_id": 290,
+          "bbox": [
+            -0.40000153,
+            1439.2001,
+            63.00000153,
+            129.0
+          ]
+        },
+        {
+          "index": 766,
+          "id": 766,
+          "image_id": 393,
+          "bbox": [
+            2033.0746,
+            451.0,
+            336.42610000000013,
+            358.0
+          ]
+        },
+        {
+          "index": 974,
+          "id": 974,
+          "image_id": 473,
+          "bbox": [
+            Infinity,
+            Infinity,
+            -Infinity,
+            -Infinity
+          ]
+        },
+        {
+          "index": 1422,
+          "id": 1422,
+          "image_id": 695,
+          "bbox": [
+            8176.14,
+            12861.421,
+            595.3499999999995,
+            635.039999999999
+          ]
+        },
+        {
+          "index": 1486,
+          "id": 1486,
+          "image_id": 738,
+          "bbox": [
+            Infinity,
+            Infinity,
+            -Infinity,
+            -Infinity
+          ]
+        },
+        {
+          "index": 2599,
+          "id": 2599,
+          "image_id": 1268,
+          "bbox": [
+            Infinity,
+            Infinity,
+            -Infinity,
+            -Infinity
+          ]
+        },
+        {
+          "index": 2854,
+          "id": 2854,
+          "image_id": 1394,
+          "bbox": [
+            Infinity,
+            Infinity,
+            -Infinity,
+            -Infinity
+          ]
+        },
+        {
+          "index": 3246,
+          "id": 3246,
+          "image_id": 1577,
+          "bbox": [
+            Infinity,
+            Infinity,
+            -Infinity,
+            -Infinity
+          ]
+        },
+        {
+          "index": 3363,
+          "id": 3363,
+          "image_id": 1609,
+          "bbox": [
+            1184.4,
+            -6.3,
+            598.5,
+            207.9
+          ]
+        },
+        {
+          "index": 3515,
+          "id": 3515,
+          "image_id": 1690,
+          "bbox": [
+            1421.8,
+            1518.7233,
+            675.0000000000002,
+            850.4771000000001
+          ]
+        },
+        {
+          "index": 3845,
+          "id": 3845,
+          "image_id": 1843,
+          "bbox": [
+            -0.68435013,
+            30.17666,
+            480.41378012999996,
+            837.6750400000001
+          ]
+        },
+        {
+          "index": 3934,
+          "id": 3934,
+          "image_id": 1876,
+          "bbox": [
+            328.25,
+            -0.9453125,
+            33.0,
+            54.0000005
+          ]
+        },
+        {
+          "index": 4166,
+          "id": 4166,
+          "image_id": 1983,
+          "bbox": [
+            Infinity,
+            Infinity,
+            -Infinity,
+            -Infinity
+          ]
+        },
+        {
+          "index": 4427,
+          "id": 4427,
+          "image_id": 2094,
+          "bbox": [
+            134.85,
+            -4.65,
+            967.1999999999999,
+            2976.0
+          ]
+        },
+        {
+          "index": 4660,
+          "id": 4660,
+          "image_id": 2213,
+          "bbox": [
+            Infinity,
+            Infinity,
+            -Infinity,
+            -Infinity
+          ]
+        },
+        {
+          "index": 5292,
+          "id": 5292,
+          "image_id": 2504,
+          "bbox": [
+            -0.222229,
+            1965.1111,
+            65.999999,
+            72.0
+          ]
+        },
+        {
+          "index": 5437,
+          "id": 5437,
+          "image_id": 2567,
+          "bbox": [
+            330.5,
+            -1.0,
+            509.0,
+            171.0
+          ]
+        },
+        {
+          "index": 5843,
+          "id": 5843,
+          "image_id": 2716,
+          "bbox": [
+            -0.16668701,
+            1439.0,
+            134.99999701000002,
+            189.0
+          ]
+        },
+        {
+          "index": 6044,
+          "id": 6044,
+          "image_id": 2801,
+          "bbox": [
+            Infinity,
+            Infinity,
+            -Infinity,
+            -Infinity
+          ]
+        },
+        {
+          "index": 6548,
+          "id": 6548,
+          "image_id": 3037,
+          "bbox": [
+            -5.9604645e-06,
+            2121.4285,
+            362.5000059604645,
+            275.0
+          ]
+        },
+        {
+          "index": 6717,
+          "id": 6717,
+          "image_id": 3113,
+          "bbox": [
+            Infinity,
+            Infinity,
+            -Infinity,
+            -Infinity
+          ]
+        },
+        {
+          "index": 6909,
+          "id": 6909,
+          "image_id": 3200,
+          "bbox": [
+            15.120009,
+            -1.0,
+            2368.799991,
+            3076.66
+          ]
+        },
+        {
+          "index": 6990,
+          "id": 6990,
+          "image_id": 3231,
+          "bbox": [
+            107.00734,
+            -0.059448242,
+            354.00001,
+            587.0733482420001
+          ]
+        },
+        {
+          "index": 7122,
+          "id": 7122,
+          "image_id": 3315,
+          "bbox": [
+            0.333313,
+            -2.0,
+            717.999987,
+            900.0
+          ]
+        },
+        {
+          "index": 7402,
+          "id": 7402,
+          "image_id": 3422,
+          "bbox": [
+            2104.9868,
+            2302.0,
+            271.02829999999994,
+            547.0
+          ]
+        },
+        {
+          "index": 7403,
+          "id": 7403,
+          "image_id": 3422,
+          "bbox": [
+            2254.5544,
+            2604.5,
+            121.46070000000009,
+            162.0
+          ]
+        },
+        {
+          "index": 7404,
+          "id": 7404,
+          "image_id": 3422,
+          "bbox": [
+            2319.802,
+            2845.5,
+            54.20559999999978,
+            108.0
+          ]
+        },
+        {
+          "index": 7405,
+          "id": 7405,
+          "image_id": 3422,
+          "bbox": [
+            2348.9124,
+            2834.5,
+            27.102699999999913,
+            42.0
+          ]
+        },
+        {
+          "index": 7597,
+          "id": 7597,
+          "image_id": 3507,
+          "bbox": [
+            Infinity,
+            Infinity,
+            -Infinity,
+            -Infinity
+          ]
+        },
+        {
+          "index": 7937,
+          "id": 7937,
+          "image_id": 3670,
+          "bbox": [
+            Infinity,
+            Infinity,
+            -Infinity,
+            -Infinity
+          ]
+        },
+        {
+          "index": 7964,
+          "id": 7964,
+          "image_id": 3683,
+          "bbox": [
+            11438.89,
+            15641.385,
+            2750.0,
+            7061.110999999999
+          ]
+        },
+        {
+          "index": 7965,
+          "id": 7965,
+          "image_id": 3683,
+          "bbox": [
+            8232.64,
+            13913.087,
+            3875.0,
+            5054.167000000001
+          ]
+        },
+        {
+          "index": 7966,
+          "id": 7966,
+          "image_id": 3683,
+          "bbox": [
+            6133.3335,
+            2075.586,
+            3393.749500000001,
+            2882.6390000000006
+          ]
+        },
+        {
+          "index": 7967,
+          "id": 7967,
+          "image_id": 3683,
+          "bbox": [
+            7440.9727,
+            6766.5586,
+            5975.0003,
+            7843.750399999999
+          ]
+        },
+        {
+          "index": 7968,
+          "id": 7968,
+          "image_id": 3683,
+          "bbox": [
+            1012.5,
+            15851.976,
+            5225.0,
+            4958.3330000000005
+          ]
+        },
+        {
+          "index": 7969,
+          "id": 7969,
+          "image_id": 3683,
+          "bbox": [
+            3868.75,
+            5172.8086,
+            2668.75,
+            2981.25
+          ]
+        },
+        {
+          "index": 7970,
+          "id": 7970,
+          "image_id": 3683,
+          "bbox": [
+            237.5,
+            18567.254,
+            1643.75,
+            2995.138999999999
+          ]
+        },
+        {
+          "index": 8061,
+          "id": 8061,
+          "image_id": 3713,
+          "bbox": [
+            Infinity,
+            Infinity,
+            -Infinity,
+            -Infinity
+          ]
+        },
+        {
+          "index": 8211,
+          "id": 8211,
+          "image_id": 3774,
+          "bbox": [
+            Infinity,
+            Infinity,
+            -Infinity,
+            -Infinity
+          ]
+        },
+        {
+          "index": 8258,
+          "id": 8258,
+          "image_id": 3800,
+          "bbox": [
+            Infinity,
+            Infinity,
+            -Infinity,
+            -Infinity
+          ]
+        }
+      ],
+      "duplicate_ids": []
+    }
+  },
+  "decisions": [
+    {
+      "file": "annotations.json",
+      "index": 309,
+      "old_id": 309,
+      "new_id": 4784,
+      "action": "reasignar_id_duplicado",
+      "reason": "Objeto diferente (imagen/clase/caja); conservar ambos registros."
+    },
+    {
+      "file": "annotations.json",
+      "index": 371,
+      "id": 371,
+      "image_id": 109,
+      "action": "interseccion_caja_con_limites",
+      "before": [
+        1003.0,
+        -1.0,
+        787.0,
+        411.0
+      ],
+      "after": [
+        1003.0,
+        0,
+        787.0,
+        410.0
+      ],
+      "reason": "Desborde marginal <=2 px; no se infiere geometria oculta. Segmentacion original conservada, no usada para deteccion."
+    },
+    {
+      "file": "annotations.json",
+      "index": 387,
+      "id": 387,
+      "image_id": 112,
+      "action": "interseccion_caja_con_limites",
+      "before": [
+        1408.0,
+        -1.0,
+        369.0,
+        471.0
+      ],
+      "after": [
+        1408.0,
+        0,
+        369.0,
+        470.0
+      ],
+      "reason": "Desborde marginal <=2 px; no se infiere geometria oculta. Segmentacion original conservada, no usada para deteccion."
+    },
+    {
+      "file": "annotations.json",
+      "index": 707,
+      "id": 707,
+      "image_id": 209,
+      "action": "interseccion_caja_con_limites",
+      "before": [
+        0.0,
+        -1.0,
+        1352.0,
+        2364.0
+      ],
+      "after": [
+        0,
+        0,
+        1352.0,
+        2363.0
+      ],
+      "reason": "Desborde marginal <=2 px; no se infiere geometria oculta. Segmentacion original conservada, no usada para deteccion."
+    },
+    {
+      "file": "annotations.json",
+      "index": 859,
+      "id": 859,
+      "image_id": 278,
+      "action": "interseccion_caja_con_limites",
+      "before": [
+        -1.0,
+        366.0,
+        198.0,
+        307.0
+      ],
+      "after": [
+        0,
+        366.0,
+        197.0,
+        307.0
+      ],
+      "reason": "Desborde marginal <=2 px; no se infiere geometria oculta. Segmentacion original conservada, no usada para deteccion."
+    },
+    {
+      "file": "annotations.json",
+      "index": 1621,
+      "id": 1621,
+      "image_id": 457,
+      "action": "interseccion_caja_con_limites",
+      "before": [
+        799.0,
+        -1.0,
+        492.0,
+        484.0
+      ],
+      "after": [
+        799.0,
+        0,
+        492.0,
+        483.0
+      ],
+      "reason": "Desborde marginal <=2 px; no se infiere geometria oculta. Segmentacion original conservada, no usada para deteccion."
+    },
+    {
+      "file": "annotations.json",
+      "index": 1777,
+      "id": 1777,
+      "image_id": 549,
+      "action": "interseccion_caja_con_limites",
+      "before": [
+        171.03125,
+        -1.3166667,
+        518.35625,
+        413.4333367
+      ],
+      "after": [
+        171.03125,
+        0,
+        518.35625,
+        412.11667
+      ],
+      "reason": "Desborde marginal <=2 px; no se infiere geometria oculta. Segmentacion original conservada, no usada para deteccion."
+    },
+    {
+      "file": "annotations.json",
+      "index": 2186,
+      "id": 2186,
+      "image_id": 679,
+      "action": "interseccion_caja_con_limites",
+      "before": [
+        1311.0,
+        -0.5,
+        286.0,
+        589.0
+      ],
+      "after": [
+        1311.0,
+        0,
+        286.0,
+        588.5
+      ],
+      "reason": "Desborde marginal <=2 px; no se infiere geometria oculta. Segmentacion original conservada, no usada para deteccion."
+    },
+    {
+      "file": "annotations.json",
+      "index": 4040,
+      "old_id": 4040,
+      "new_id": 4785,
+      "action": "reasignar_id_duplicado",
+      "reason": "Objeto diferente (imagen/clase/caja); conservar ambos registros."
+    }
+  ],
+  "unofficial_policy": "41 cajas se documentan, no se descargan ni corrigen datos no oficiales."
+}

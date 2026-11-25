@@ -1,0 +1,201 @@
+{
+  "accuracy": 0.55,
+  "questions": 20,
+  "intents": [
+    "inventario",
+    "separar",
+    "organicos",
+    "suciedad",
+    "fuera_alcance"
+  ],
+  "confusion_matrix": [
+    [
+      3,
+      0,
+      0,
+      1,
+      0
+    ],
+    [
+      0,
+      1,
+      0,
+      3,
+      0
+    ],
+    [
+      1,
+      0,
+      0,
+      0,
+      3
+    ],
+    [
+      0,
+      0,
+      0,
+      3,
+      1
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      4
+    ]
+  ],
+  "classes": {
+    "inventario": {
+      "support": 4,
+      "precision": 0.75,
+      "recall": 0.75
+    },
+    "separar": {
+      "support": 4,
+      "precision": 1.0,
+      "recall": 0.25
+    },
+    "organicos": {
+      "support": 4,
+      "precision": null,
+      "recall": 0.0
+    },
+    "suciedad": {
+      "support": 4,
+      "precision": 0.42857142857142855,
+      "recall": 0.75
+    },
+    "fuera_alcance": {
+      "support": 4,
+      "precision": 0.5,
+      "recall": 1.0
+    }
+  },
+  "results": [
+    {
+      "text": "Haz un inventario de la basura visible",
+      "intent": "inventario",
+      "prediction": "suciedad",
+      "confidence": 0.6560815572738647
+    },
+    {
+      "text": "Puedes contar lo detectado en este fotograma",
+      "intent": "inventario",
+      "prediction": "inventario",
+      "confidence": 0.9729177951812744
+    },
+    {
+      "text": "Me dices los materiales que aparecen",
+      "intent": "inventario",
+      "prediction": "inventario",
+      "confidence": 0.9450840950012207
+    },
+    {
+      "text": "Qué identificó el modelo en la imagen",
+      "intent": "inventario",
+      "prediction": "inventario",
+      "confidence": 0.8273866176605225
+    },
+    {
+      "text": "Necesito saber dónde echar el aluminio",
+      "intent": "separar",
+      "prediction": "suciedad",
+      "confidence": 0.7466347813606262
+    },
+    {
+      "text": "Indica el color de caneca para las hojas",
+      "intent": "separar",
+      "prediction": "separar",
+      "confidence": 0.6875402331352234
+    },
+    {
+      "text": "Tengo este frasco qué hago con él",
+      "intent": "separar",
+      "prediction": "suciedad",
+      "confidence": 0.9935770630836487
+    },
+    {
+      "text": "Ayúdame con la separación de esa botella",
+      "intent": "separar",
+      "prediction": "suciedad",
+      "confidence": 0.9524008631706238
+    },
+    {
+      "text": "Algún objeto detectado es orgánico",
+      "intent": "organicos",
+      "prediction": "fuera_alcance",
+      "confidence": 0.6443105936050415
+    },
+    {
+      "text": "Se puede ver alguna cáscara",
+      "intent": "organicos",
+      "prediction": "inventario",
+      "confidence": 0.750398576259613
+    },
+    {
+      "text": "Hay sobras de alimentos frente a nosotros",
+      "intent": "organicos",
+      "prediction": "fuera_alcance",
+      "confidence": 0.5468513369560242
+    },
+    {
+      "text": "Entre lo que ves hay materia orgánica",
+      "intent": "organicos",
+      "prediction": "fuera_alcance",
+      "confidence": 0.5275159478187561
+    },
+    {
+      "text": "Si el cartón absorbió aceite todavía se recicla",
+      "intent": "suciedad",
+      "prediction": "suciedad",
+      "confidence": 0.9811208844184875
+    },
+    {
+      "text": "Ese papel quedó manchado de salsa",
+      "intent": "suciedad",
+      "prediction": "fuera_alcance",
+      "confidence": 0.6492977142333984
+    },
+    {
+      "text": "Es necesario secar el envase después de lavarlo",
+      "intent": "suciedad",
+      "prediction": "suciedad",
+      "confidence": 0.9856200218200684
+    },
+    {
+      "text": "La lata tiene comida adherida cuál es el paso siguiente",
+      "intent": "suciedad",
+      "prediction": "suciedad",
+      "confidence": 0.9714060425758362
+    },
+    {
+      "text": "Busca pasajes de avión baratos",
+      "intent": "fuera_alcance",
+      "prediction": "fuera_alcance",
+      "confidence": 0.0
+    },
+    {
+      "text": "Programa una alarma para mañana",
+      "intent": "fuera_alcance",
+      "prediction": "fuera_alcance",
+      "confidence": 0.976637601852417
+    },
+    {
+      "text": "Explica cómo arreglar mi teléfono",
+      "intent": "fuera_alcance",
+      "prediction": "fuera_alcance",
+      "confidence": 0.7729316353797913
+    },
+    {
+      "text": "Cuánto es ocho multiplicado por siete",
+      "intent": "fuera_alcance",
+      "prediction": "fuera_alcance",
+      "confidence": 0.0
+    }
+  ],
+  "provenance": "Corpus semilla del proyecto, escrito sin modelos externos ni embeddings. Las frases test se redactaron por separado, pero no por evaluadores humanos independientes. Ampliar y reservar evaluación humana antes de sustentar generalización.",
+  "checkpoint_sha256": "8480877ae3eb4c83f33fd2452a912e0488a75db908bc9d76d521a17920ca34c5",
+  "corpus_sha256": "3737f2ca867f276c251b43fc75faafa51ab56df98819b03bc1069517f296fddb",
+  "warning": "Corpus inicial redactado durante implementación. No sustituye preguntas de evaluadores humanos independientes."
+}

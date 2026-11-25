@@ -1,0 +1,32 @@
+# Entornos virtuales y cachés
+.venv/
+.uv-cache/
+.cache/
+__pycache__/
+*.py[cod]
+*$py.class
+tmp/
+
+# Datasets pesados y tensores masivos
+data/
+*.npy
+*.mp4
+*.avi
+*.mov
+
+# Ignorar runs temporales pero CONSERVAR los modelos entrenados ligeros (~1.4MB)
+runs/*
+!runs/detector_exp07_b/
+runs/detector_exp07_b/*
+!runs/detector_exp07_b/best.pt
+!runs/detector_exp07_b/*.json
+
+!runs/detector/
+runs/detector/*
+!runs/detector/best.pt
+!runs/detector/*.json
+
+!runs/assistant/
+runs/assistant/*
+!runs/assistant/best.pt
+!runs/assistant/*.json

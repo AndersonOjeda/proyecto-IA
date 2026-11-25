@@ -1,0 +1,13 @@
+[
+  {
+    "image_id": "bb3cf1b59113fb7da5fb",
+    "source": "TACO oficial",
+    "original_path": "data/preparado/taco_oficial/batch_14/000020.jpg",
+    "annotation_ids": [1729],
+    "original_class": "Other carton",
+    "action": "dejar_escena_pendiente",
+    "target_proposal": "carton|metal|plastico",
+    "reason": "revision_visual_acabado_metalizado_material_incierto",
+    "evidence": "Al revisar la vista previa se observa una superficie reflectante/metalizada. No puede confirmarse carton monocapa. Se conserva la caja y la clase de origen para decision humana; no se reasigna material automaticamente."
+  }
+]

@@ -1,0 +1,19 @@
+{
+  "checkpoint": "C:\\Users\\Anderson Ojeda\\Downloads\\IA\\proyecto final\\runs\\detector_exp07_b\\best.pt",
+  "checkpoint_sha256": "6dd6621407b527ce1fc24b327fb4447805946419e19635e8e8a648ce9aaddfa1",
+  "epoch": 16,
+  "threshold": 0.3,
+  "micro_f1": 0.18200356869742543,
+  "modes": {
+    "cobertura": {
+      "threshold": 0.35,
+      "min_box_size": 0,
+      "description": "Modo m\u00e1xima cobertura"
+    },
+    "precision": {
+      "threshold": 0.4,
+      "min_box_size": 32,
+      "description": "Modo alta precisi\u00f3n"
+    }
+  }
+}

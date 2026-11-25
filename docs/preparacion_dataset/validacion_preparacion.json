@@ -1,0 +1,23 @@
+{
+  "group_split_leaks": 0,
+  "exact_hash_split_leaks": 0,
+  "ready_with_ambiguity": 0,
+  "food_empty_kept_pending": 888,
+  "all_boxes_geometrically_valid": true,
+  "training_started": false,
+  "reused_audit": "docs/auditoria_externos/verificacion_imagenes.csv",
+  "new_images_verified_by_downloader": true,
+  "annotations_preserved": {
+    "Bangladesh canonical": 6076,
+    "Food Waste": 28446,
+    "TACO oficial": 4784
+  },
+  "manual_batch_images": 90,
+  "manual_batch_generated_boxes": 0,
+  "taco_official_recovered": 1500,
+  "taco_failed": 0,
+  "annotator_real_manifest_open_test": "passed_without_saving",
+  "preparation_unit_tests": 5,
+  "visual_pending_overrides": 1,
+  "source_official_annotations_byte_copy_verified": true
+}

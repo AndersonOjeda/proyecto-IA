@@ -1,0 +1,8 @@
+{
+  "plastico": {"aliases": ["plastico", "plasticos", "botella", "envase"], "advice": "Si es aprovechable, está limpio y seco y lo recibe la ruta local, sepárelo en blanco. Si no es aprovechable, corresponde negro. Un envase contaminado con sustancias peligrosas requiere consultar su ruta específica."},
+  "papel": {"aliases": ["papel", "hoja", "hojas"], "advice": "Papel aprovechable limpio y seco: blanco. Papel sanitario o contaminado con comida: negro. Confirme el tipo de papel y las condiciones con el usuario."},
+  "carton": {"aliases": ["carton", "caja", "cajas"], "advice": "Cartón aprovechable limpio y seco: blanco. Cartón contaminado con comida o grasa: negro. No suponga que está limpio a partir del color de la imagen."},
+  "vidrio": {"aliases": ["vidrio", "frasco", "frascos"], "advice": "Vidrio aprovechable limpio y seco: blanco, según recepción local. Si está roto, evite manipular los bordes y consulte al recolector cómo entregarlo de forma segura."},
+  "metal": {"aliases": ["metal", "lata", "latas", "aluminio"], "advice": "Lata o metal aprovechable limpio y seco: blanco. Confirme que no sea un recipiente de sustancias peligrosas; esos residuos requieren una ruta específica."},
+  "organico": {"aliases": ["organico", "organicos", "cascara", "cascaras", "comida", "restos"], "advice": "Restos de alimentos orgánicos aprovechables: verde, conforme a la ruta orgánica local. No mezcle empaques; confirme la disponibilidad de aprovechamiento o compostaje."}
+}

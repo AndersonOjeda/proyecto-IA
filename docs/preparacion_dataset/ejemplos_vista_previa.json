@@ -1,0 +1,38 @@
+[
+  {
+    "class_name": "plastico",
+    "image_id": "1e38be0d1c6ae134c945",
+    "original": "data/preparado/taco_oficial/batch_11/000034.jpg",
+    "group": "g_62f1fe0006e11a306450"
+  },
+  {
+    "class_name": "papel",
+    "image_id": "28af4b55889586ab859b",
+    "original": "data/preparado/taco_oficial/batch_1/000079.JPG",
+    "group": "g_07c89a77aaee01bba4b6"
+  },
+  {
+    "class_name": "carton",
+    "image_id": "18e846ac5cd3ab462cf4",
+    "original": "data/preparado/taco_oficial/batch_6/000009.JPG",
+    "group": "g_89f5d207c43962685e14"
+  },
+  {
+    "class_name": "vidrio",
+    "image_id": "89d7998e66e80ecec518",
+    "original": "data/preparado/taco_oficial/batch_13/000067.jpg",
+    "group": "g_c4686580bd6e770a318e"
+  },
+  {
+    "class_name": "metal",
+    "image_id": "3259e00ea736c9ea409d",
+    "original": "data/preparado/taco_oficial/batch_12/000053.jpg",
+    "group": "g_3ee48bd12c4cd30b990b"
+  },
+  {
+    "class_name": "organico",
+    "image_id": "d828438049e6bb5fd937",
+    "original": "data/externos/Food Waste Detection.v11-all-class-simplified-v11.coco/train/20220527T133033_jpg.rf.e9404b1cfea49c34015c9289591482e4.jpg",
+    "group": "g_a8c5576accf65ba02be9"
+  }
+]

@@ -1,0 +1,7 @@
+﻿clase,train_imagenes_unicas,train_cajas_validas,train_grupos,val_imagenes_unicas,val_cajas_validas,val_grupos,test_imagenes_unicas,test_cajas_validas,test_grupos,pendientes_imagenes_asociadas,lote_manual
+plastico,1782,3398,1585,380,739,330,378,756,327,1190,0
+papel,43,57,43,11,13,11,12,13,12,1739,25
+carton,63,82,63,7,12,7,18,23,18,1531,20
+vidrio,34,71,34,7,9,7,6,9,6,546,30
+metal,137,260,137,21,34,21,36,70,36,567,15
+organico,1711,5084,203,270,757,43,115,450,43,4631,0

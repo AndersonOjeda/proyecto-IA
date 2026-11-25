@@ -1,0 +1,197 @@
+{
+  "checkpoint": "C:\\Users\\Anderson Ojeda\\Downloads\\IA\\proyecto final\\runs\\detector_exp07_b\\best.pt",
+  "baseline_th_035": {
+    "tot_tp": 250,
+    "tot_fp": 1007,
+    "tot_fn": 1314,
+    "precision": 0.19888623707239458,
+    "recall": 0.159846547314578,
+    "micro_f1": 0.1772421127259837,
+    "classes": {
+      "plastico": {
+        "tp": 111,
+        "fp": 111,
+        "fn": 628,
+        "precision": 0.5,
+        "recall": 0.15020297699594046,
+        "f1": 0.23100936524453694
+      },
+      "papel": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 13,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "carton": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 12,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "vidrio": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 9,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "metal": {
+        "tp": 0,
+        "fp": 2,
+        "fn": 34,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "organico": {
+        "tp": 139,
+        "fp": 894,
+        "fn": 618,
+        "precision": 0.1345595353339787,
+        "recall": 0.18361955085865259,
+        "f1": 0.1553072625698324
+      }
+    }
+  },
+  "calibrated_balanced": {
+    "thresholds": {
+      "plastico": 0.35,
+      "papel": 0.35,
+      "carton": 0.2,
+      "vidrio": 0.25,
+      "metal": 0.2,
+      "organico": 0.55
+    },
+    "metrics": {
+      "tot_tp": 140,
+      "tot_fp": 196,
+      "tot_fn": 1424,
+      "precision": 0.4166666666666667,
+      "recall": 0.08951406649616368,
+      "micro_f1": 0.14736842105263157,
+      "classes": {
+        "plastico": {
+          "tp": 111,
+          "fp": 111,
+          "fn": 628,
+          "precision": 0.5,
+          "recall": 0.15020297699594046,
+          "f1": 0.23100936524453694
+        },
+        "papel": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 13,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "carton": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 11,
+          "precision": 1.0,
+          "recall": 0.08333333333333333,
+          "f1": 0.15384615384615385
+        },
+        "vidrio": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 9,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "metal": {
+          "tp": 3,
+          "fp": 49,
+          "fn": 31,
+          "precision": 0.057692307692307696,
+          "recall": 0.08823529411764706,
+          "f1": 0.06976744186046513
+        },
+        "organico": {
+          "tp": 25,
+          "fp": 36,
+          "fn": 732,
+          "precision": 0.4098360655737705,
+          "recall": 0.03302509907529723,
+          "f1": 0.06112469437652812
+        }
+      }
+    }
+  },
+  "calibrated_high_precision": {
+    "thresholds": {
+      "plastico": 0.4,
+      "papel": 0.35,
+      "carton": 0.35,
+      "vidrio": 0.35,
+      "metal": 0.35,
+      "organico": 0.5
+    },
+    "metrics": {
+      "tot_tp": 96,
+      "tot_fp": 137,
+      "tot_fn": 1468,
+      "precision": 0.41201716738197425,
+      "recall": 0.061381074168797956,
+      "micro_f1": 0.10684474123539232,
+      "classes": {
+        "plastico": {
+          "tp": 65,
+          "fp": 41,
+          "fn": 674,
+          "precision": 0.6132075471698113,
+          "recall": 0.08795669824086604,
+          "f1": 0.15384615384615385
+        },
+        "papel": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 13,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "carton": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 12,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "vidrio": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 9,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "metal": {
+          "tp": 0,
+          "fp": 2,
+          "fn": 34,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "organico": {
+          "tp": 31,
+          "fp": 94,
+          "fn": 726,
+          "precision": 0.248,
+          "recall": 0.04095112285336856,
+          "f1": 0.07029478458049887
+        }
+      }
+    }
+  }
+}

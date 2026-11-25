@@ -1,0 +1,11 @@
+{
+  "epochs": 100,
+  "seed": 42,
+  "device": "cpu",
+  "lr": 0.002,
+  "batch": 16,
+  "dimensions": 48,
+  "heads": 4,
+  "layers": 2,
+  "corpus_sha256": "3737f2ca867f276c251b43fc75faafa51ab56df98819b03bc1069517f296fddb"
+}

@@ -1,0 +1,77 @@
+{
+  "variant": "Exp07B_BalancedWeights_BackgroundSuppressed",
+  "architecture": "DetectorS8",
+  "weights_init": "random_from_scratch",
+  "epochs": 25,
+  "batch_size": 16,
+  "lr": 0.001,
+  "seed": 42,
+  "device": "cuda",
+  "ema_decay": 0.996,
+  "focal_alpha": 0.6,
+  "class_weights_7b": [
+    0.45329999923706055,
+    1.0527000427246094,
+    1.951200008392334,
+    1.1770000457763672,
+    0.9513999819755554,
+    0.41440001130104065
+  ],
+  "dry_run": false,
+  "total_train_images": 5950,
+  "base_train_images": 3645,
+  "external_verified_images": 1505,
+  "manual_train_images": 60,
+  "datos_separados_images": 740,
+  "val_images": 670,
+  "leak_audit": {
+    "status": "PASSED_CLEAN",
+    "val_leakage_detected": false,
+    "counts": {
+      "orig_val": 670,
+      "orig_train": 3645,
+      "ext_rows": 1505,
+      "manual_train": 60,
+      "sep_rows": 740,
+      "total_train": 5950
+    },
+    "validation_leakage_audit": {
+      "val_vs_orig_train": 0,
+      "val_vs_ext_rows": 0,
+      "val_vs_manual_train": 0,
+      "val_vs_sep_rows": 0
+    },
+    "train_overlaps": {
+      "orig_train_vs_ext_rows": {
+        "path_overlaps": 0,
+        "sha256_overlaps": 0,
+        "sample_path_overlaps": []
+      },
+      "orig_train_vs_manual_train": {
+        "path_overlaps": 0,
+        "sha256_overlaps": 0,
+        "sample_path_overlaps": []
+      },
+      "orig_train_vs_sep_rows": {
+        "path_overlaps": 0,
+        "sha256_overlaps": 0,
+        "sample_path_overlaps": []
+      },
+      "ext_rows_vs_manual_train": {
+        "path_overlaps": 0,
+        "sha256_overlaps": 0,
+        "sample_path_overlaps": []
+      },
+      "ext_rows_vs_sep_rows": {
+        "path_overlaps": 0,
+        "sha256_overlaps": 0,
+        "sample_path_overlaps": []
+      },
+      "manual_train_vs_sep_rows": {
+        "path_overlaps": 0,
+        "sha256_overlaps": 0,
+        "sample_path_overlaps": []
+      }
+    }
+  }
+}

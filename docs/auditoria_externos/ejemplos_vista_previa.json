@@ -1,0 +1,44 @@
+[
+  {
+    "target": "plastico",
+    "image": "data/externos/bangladesh_recyclable_waste_dataset/bangladesh_recyclable_waste_dataset/data_canonical_75-15-10/test/images/20250303_141446_jpg.rf.156829ab73f88e4838e86efc7dc7e3e2.jpg",
+    "source": "Bangladesh canonical_75-15-10",
+    "original_class": "Plastic waste",
+    "format": "YOLO poligono; bbox derivada"
+  },
+  {
+    "target": "papel",
+    "image": "data/externos/dataset-resized/dataset-resized/paper/paper1.jpg",
+    "source": "dataset-resized",
+    "original_class": "paper",
+    "format": "Etiqueta de imagen"
+  },
+  {
+    "target": "carton",
+    "image": "data/externos/dataset-resized/dataset-resized/cardboard/cardboard1.jpg",
+    "source": "dataset-resized",
+    "original_class": "cardboard",
+    "format": "Etiqueta de imagen"
+  },
+  {
+    "target": "vidrio",
+    "image": "data/externos/dataset-resized/dataset-resized/glass/glass1.jpg",
+    "source": "dataset-resized",
+    "original_class": "glass",
+    "format": "Etiqueta de imagen"
+  },
+  {
+    "target": "metal",
+    "image": "data/externos/dataset-resized/dataset-resized/metal/metal1.jpg",
+    "source": "dataset-resized",
+    "original_class": "metal",
+    "format": "Etiqueta de imagen"
+  },
+  {
+    "target": "organico",
+    "image": "data/externos/Food Waste Detection.v11-all-class-simplified-v11.coco/train/00c99468954ed44610870a13c8fa7513_jpg.rf.3c7f824da4edfd12d9ce019891089836.jpg",
+    "source": "Food Waste",
+    "original_class": "Apple",
+    "format": "COCO bbox"
+  }
+]

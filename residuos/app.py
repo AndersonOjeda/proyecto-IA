@@ -74,7 +74,11 @@ class Application:
     def open_source(self,source):
         if self.model is None:
             messagebox.showerror('Detector no disponible',self.status.get()); return
-        self.reset_source(); self.cap=cv2.VideoCapture(source)
+        self.reset_source()
+        if isinstance(source, int) and sys.platform.startswith('win'):
+            self.cap = cv2.VideoCapture(source, cv2.CAP_DSHOW)
+        else:
+            self.cap = cv2.VideoCapture(source)
         if not self.cap.isOpened():
             self.status.set('No se pudo abrir el video o cámara.'); self.cap.release(); self.cap=None; return
         self.running=True; self.status.set(f'Inferencia local · umbral validado {self.threshold:.2f} · {self.device}')

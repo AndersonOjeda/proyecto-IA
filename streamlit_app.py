@@ -231,67 +231,135 @@ tab_detect, tab_assistant, tab_metrics = st.tabs([
 
 # ==================== PESTAÑA 1: DETECCIÓN VISUAL ====================
 with tab_detect:
-    col_input, col_output = st.columns([1, 1.2])
+    source_type = st.radio(
+        "Selecciona el modo de captura:",
+        ["📹 Cámara en Vivo Continua", "📸 Foto con Cámara", "📁 Subir Archivo", "🖼️ Imagen de Ejemplo"],
+        horizontal=True
+    )
 
-    with col_input:
-        st.subheader("1. Entrada de Imagen")
-        source_type = st.radio("Selecciona el origen de la imagen:", ["Subir Archivo", "Cámara Web", "Imagen de Ejemplo"], horizontal=True)
+    if source_type == "📹 Cámara en Vivo Continua":
+        st.markdown("#### 📹 Reconocimiento Automático Continuo por Cámara Web")
+        st.info("Coloca cualquier objeto frente a tu cámara (botellas plásticas, cajas de cartón, cáscaras, latas, etc.). El modelo `DetectorS8 Exp07-B` lo detectará y clasificará automáticamente en tiempo real.")
+        
+        col_c1, col_c2 = st.columns([1, 1.2])
+        with col_c1:
+            run_live = st.toggle("🔴 Iniciar Reconocimiento en Tiempo Real", value=False)
+            if not run_live:
+                st.caption("👈 Activa el interruptor para encender la cámara web y ver la detección automática en vivo.")
 
-        image_bgr = None
+        with col_c2:
+            live_frame_slot = st.empty()
+            live_metrics_slot = st.empty()
+            live_table_slot = st.empty()
 
-        if source_type == "Subir Archivo":
-            uploaded_file = st.file_uploader("Elige una foto de residuos (JPG, PNG)...", type=['jpg', 'jpeg', 'png'])
-            if uploaded_file is not None:
-                file_bytes = np.asarray(bytearray(uploaded_file.read()), dtype=np.uint8)
-                image_bgr = cv2.imdecode(file_bytes, cv2.IMREAD_COLOR)
-
-        elif source_type == "Cámara Web":
-            camera_photo = st.camera_input("Capturar foto desde la cámara")
-            if camera_photo is not None:
-                file_bytes = np.asarray(bytearray(camera_photo.read()), dtype=np.uint8)
-                image_bgr = cv2.imdecode(file_bytes, cv2.IMREAD_COLOR)
-
-        else:
-            sample_path = ROOT / "ejemplo.jpg"
-            if sample_path.exists():
-                image_bgr = cv2.imread(str(sample_path))
-                st.caption(f"Cargada imagen de muestra: `{sample_path.name}`")
+        if run_live and detector_model is not None:
+            backend = cv2.CAP_DSHOW if sys.platform.startswith('win') else cv2.CAP_ANY
+            cap = cv2.VideoCapture(0, backend)
+            if not cap.isOpened():
+                st.error("No se pudo acceder a la cámara web. Verifica que no esté en uso por otra aplicación.")
             else:
-                st.warning("No se encontró `ejemplo.jpg` en la raíz.")
+                try:
+                    while run_live:
+                        ret, frame = cap.read()
+                        if not ret:
+                            st.warning("Se interrumpió la señal de la cámara.")
+                            break
+                        
+                        detections, latency_ms = run_inference(detector_model, device, frame, thresholds, min_size)
+                        result_img = draw_detections(frame, detections)
+                        
+                        live_frame_slot.image(
+                            result_img,
+                            caption=f"🟢 Detección en vivo · {latency_ms:.1f} ms · {device} | {len(detections)} objeto(s)",
+                            use_container_width=True
+                        )
+                        
+                        with live_metrics_slot.container():
+                            m1, m2, m3 = st.columns(3)
+                            m1.metric("Objetos en Escena", len(detections))
+                            m2.metric("Clases Únicas", len(set(d['class'] for d in detections)))
+                            m3.metric("Tiempo Inferencia", f"{latency_ms:.1f} ms")
+                            
+                        if detections:
+                            with live_table_slot.container():
+                                st.markdown("##### 📦 Residuos Reconocidos en el Fotograma:")
+                                table_data = []
+                                for idx, d in enumerate(detections, 1):
+                                    c_info = CLASS_COLORS.get(d['class'], {'caneca': 'Blanca', 'tipo': 'Aprovechable'})
+                                    table_data.append({
+                                        "#": idx,
+                                        "Residuo": d['class'].capitalize(),
+                                        "Confianza": f"{d['score']*100:.1f}%",
+                                        "Disposición": f"{CANECA_INFO[c_info['caneca']]['icono']} Caneca {c_info['caneca']}"
+                                    })
+                                st.dataframe(table_data, use_container_width=True)
+                        else:
+                            live_table_slot.empty()
+                            
+                        time.sleep(0.02)
+                finally:
+                    cap.release()
 
-    with col_output:
-        st.subheader("2. Detecciones en Tiempo Real")
-        if image_bgr is not None and detector_model is not None:
-            # Inferencia
-            detections, latency_ms = run_inference(detector_model, device, image_bgr, thresholds, min_size)
-            result_img = draw_detections(image_bgr, detections)
-            st.image(result_img, caption=f"Inferencia completada en {latency_ms:.1f} ms ({device})", use_container_width=True)
+    else:
+        col_input, col_output = st.columns([1, 1.2])
 
-            # Métricas rápidas
-            m1, m2, m3 = st.columns(3)
-            m1.metric("Objetos Detectados", len(detections))
-            clases_detectadas = set(d['class'] for d in detections)
-            m2.metric("Clases Identificadas", len(clases_detectadas))
-            m3.metric("Latencia", f"{latency_ms:.1f} ms")
+        with col_input:
+            st.subheader("1. Entrada de Imagen")
+            image_bgr = None
 
-            # Tabla de desglose de residuos
-            if detections:
-                st.markdown("#### 📦 Detalle de Residuos Identificados:")
-                table_data = []
-                for idx, d in enumerate(detections, 1):
-                    c_info = CLASS_COLORS.get(d['class'], {'caneca': 'Blanca', 'tipo': 'Aprovechable'})
-                    table_data.append({
-                        "#": idx,
-                        "Residuo": d['class'].capitalize(),
-                        "Confianza": f"{d['score']*100:.1f}%",
-                        "Tipo de Residuo": c_info['tipo'],
-                        "Caneca Asignada": f"{CANECA_INFO[c_info['caneca']]['icono']} {c_info['caneca']}"
-                    })
-                st.dataframe(table_data, use_container_width=True)
+            if source_type == "📁 Subir Archivo":
+                uploaded_file = st.file_uploader("Elige una foto de residuos (JPG, PNG)...", type=['jpg', 'jpeg', 'png'])
+                if uploaded_file is not None:
+                    file_bytes = np.asarray(bytearray(uploaded_file.read()), dtype=np.uint8)
+                    image_bgr = cv2.imdecode(file_bytes, cv2.IMREAD_COLOR)
+
+            elif source_type == "📸 Foto con Cámara":
+                camera_photo = st.camera_input("Capturar foto desde la cámara")
+                if camera_photo is not None:
+                    file_bytes = np.asarray(bytearray(camera_photo.read()), dtype=np.uint8)
+                    image_bgr = cv2.imdecode(file_bytes, cv2.IMREAD_COLOR)
+
             else:
-                st.info("No se detectaron residuos por encima del umbral en este fotograma.")
-        elif image_bgr is None:
-            st.info("👈 Por favor, carga o captura una imagen en el panel izquierdo para comenzar.")
+                sample_path = ROOT / "ejemplo.jpg"
+                if sample_path.exists():
+                    image_bgr = cv2.imread(str(sample_path))
+                    st.caption(f"Cargada imagen de muestra: `{sample_path.name}`")
+                else:
+                    st.warning("No se encontró `ejemplo.jpg` en la raíz.")
+
+        with col_output:
+            st.subheader("2. Detecciones")
+            if image_bgr is not None and detector_model is not None:
+                # Inferencia
+                detections, latency_ms = run_inference(detector_model, device, image_bgr, thresholds, min_size)
+                result_img = draw_detections(image_bgr, detections)
+                st.image(result_img, caption=f"Inferencia completada en {latency_ms:.1f} ms ({device})", use_container_width=True)
+
+                # Métricas rápidas
+                m1, m2, m3 = st.columns(3)
+                m1.metric("Objetos Detectados", len(detections))
+                clases_detectadas = set(d['class'] for d in detections)
+                m2.metric("Clases Identificadas", len(clases_detectadas))
+                m3.metric("Latencia", f"{latency_ms:.1f} ms")
+
+                # Tabla de desglose de residuos
+                if detections:
+                    st.markdown("#### 📦 Detalle de Residuos Identificados:")
+                    table_data = []
+                    for idx, d in enumerate(detections, 1):
+                        c_info = CLASS_COLORS.get(d['class'], {'caneca': 'Blanca', 'tipo': 'Aprovechable'})
+                        table_data.append({
+                            "#": idx,
+                            "Residuo": d['class'].capitalize(),
+                            "Confianza": f"{d['score']*100:.1f}%",
+                            "Tipo de Residuo": c_info['tipo'],
+                            "Caneca Asignada": f"{CANECA_INFO[c_info['caneca']]['icono']} {c_info['caneca']}"
+                        })
+                    st.dataframe(table_data, use_container_width=True)
+                else:
+                    st.info("No se detectaron residuos por encima del umbral en este fotograma.")
+            elif image_bgr is None:
+                st.info("👈 Por favor, carga o captura una imagen en el panel izquierdo para comenzar.")
 
 # ==================== PESTAÑA 2: ASISTENTE DE SEPARACIÓN (NLP) ====================
 with tab_assistant:

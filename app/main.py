@@ -11,9 +11,10 @@ if str(ROOT) not in sys.path:
 from residuos.app import Application
 
 def main():
+    default_ckpt = 'runs/detector_exp07_b/best.pt' if (ROOT / 'runs/detector_exp07_b/best.pt').exists() else 'runs/detector/best.pt'
     parser = argparse.ArgumentParser(description="Aplicación local de detección y separación de residuos.")
     parser.add_argument('--data', default='data/preparado/deteccion', help='Ruta al directorio de datos')
-    parser.add_argument('--detector', default='runs/detector/best.pt', help='Ruta al checkpoint del detector (por defecto Experimento 5 canónico)')
+    parser.add_argument('--detector', default=default_ckpt, help='Ruta al checkpoint del detector (por defecto Exp07-B récord)')
     parser.add_argument('--assistant', default='runs/assistant/best.pt', help='Ruta al transformer del asistente')
     parser.add_argument('--device', default='auto', choices=['auto', 'cpu', 'cuda'])
     parser.add_argument('--video', help='Video que se abre al iniciar; sin esta opción se muestra el selector en la app')

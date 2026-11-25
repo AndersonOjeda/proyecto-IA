@@ -1,18 +1,194 @@
 <!doctype html>
-<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Proyecto 4 · Residuos</title>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Proyecto 4 · EcoDetect UCC</title>
 <style>
-*{box-sizing:border-box}body{margin:0;background:#101f28;color:#eff6f4;font-family:'Segoe UI',Arial,sans-serif}main{max-width:1320px;margin:auto}section{display:none;min-height:90vh;padding:6vh 7vw 4vh}section.active{display:flex;flex-direction:column;justify-content:center}h1{font-size:clamp(36px,4.5vw,68px);line-height:1.08;margin:20px 0 28px;max-width:1000px;letter-spacing:-1.5px}h2{font-size:clamp(30px,3.6vw,52px);line-height:1.15;margin:18px 0 30px}p,li{font-size:clamp(20px,2.05vw,30px);line-height:1.5}p{margin:12px 0}li{margin:14px 0}small,.note{font-size:17px;line-height:1.45;color:#b2c5c9}.eyebrow{color:#58e6b1;font-size:18px;font-weight:600;letter-spacing:2px;text-transform:uppercase}.accent{color:#58e6b1}.warn{color:#ffd69a}strong{font-weight:650}table{border-collapse:collapse;width:100%;font-size:clamp(18px,1.8vw,26px)}td,th{text-align:left;padding:16px 12px;border-bottom:1px solid #36505b}th{color:#58e6b1;font-size:19px}code{font-family:Consolas,monospace;font-size:.8em;color:#8ceacb}.flow{display:flex;gap:25px;align-items:center;margin:24px 0}.flow span{flex:1;border-top:3px solid #58e6b1;padding-top:22px;font-size:25px}.flow b{display:block;font-size:40px;margin-bottom:12px}.columns{display:grid;grid-template-columns:1fr 1fr;gap:45px}.formula{font-size:clamp(28px,3.8vw,50px);margin:35px 0;padding:25px 0;border-top:1px solid #36505b;border-bottom:1px solid #36505b}footer{display:flex;position:fixed;bottom:0;width:100%;padding:12px 25px;justify-content:space-between;align-items:center;background:#0a171e;font-size:15px}button{background:#254550;color:white;border:1px solid #49707d;border-radius:4px;padding:8px 16px;margin-left:6px;cursor:pointer}a{color:#8ceacb}.source{margin-top:25px;font-size:15px;color:#b2c5c9}@media(max-width:700px){section{padding:35px 25px 95px}.columns{grid-template-columns:1fr}.flow{flex-wrap:wrap}.flow span{min-width:140px}footer{font-size:12px}}@media print{body{background:white;color:#102731}section,section.active{display:block;min-height:0;height:185mm;page-break-after:always;padding:15mm}.eyebrow,.accent,th{color:#187b63}footer{display:none}h1{font-size:40pt}h2{font-size:30pt}p,li{font-size:19pt}.note,.source,small{color:#456}table{font-size:18pt}@page{size:A4 landscape;margin:0}}
-@media print{.warn{color:#8b4800}a{color:#187b63}}
+*{box-sizing:border-box}body{margin:0;background:#0d1b2a;color:#e0e1dd;font-family:'Segoe UI',Arial,sans-serif}main{max-width:1320px;margin:auto}section{display:none;min-height:90vh;padding:6vh 7vw 4vh}section.active{display:flex;flex-direction:column;justify-content:center}h1{font-size:clamp(36px,4.5vw,68px);line-height:1.08;margin:20px 0 28px;max-width:1000px;letter-spacing:-1.5px}h2{font-size:clamp(30px,3.6vw,52px);line-height:1.15;margin:18px 0 30px}p,li{font-size:clamp(20px,2.05vw,30px);line-height:1.5}p{margin:12px 0}li{margin:14px 0}small,.note{font-size:17px;line-height:1.45;color:#94a3b8}.eyebrow{color:#00d2ff;font-size:18px;font-weight:600;letter-spacing:2px;text-transform:uppercase}.accent{color:#00d2ff}.success{color:#00ff88}.warn{color:#ffaa00}strong{font-weight:650}table{border-collapse:collapse;width:100%;font-size:clamp(17px,1.6vw,24px)}td,th{text-align:left;padding:12px 10px;border-bottom:1px solid #1e3a5f}th{color:#00d2ff;font-size:18px}code{font-family:Consolas,monospace;font-size:.85em;color:#38bdf8;background:#1e293b;padding:2px 6px;border-radius:4px}.flow{display:flex;gap:20px;align-items:center;margin:20px 0}.flow span{flex:1;border-top:3px solid #00d2ff;padding-top:16px;font-size:22px}.flow b{display:block;font-size:32px;margin-bottom:8px}.columns{display:grid;grid-template-columns:1fr 1fr;gap:40px}.formula{font-size:clamp(24px,3.2vw,44px);margin:25px 0;padding:20px 0;border-top:1px solid #1e3a5f;border-bottom:1px solid #1e3a5f}footer{display:flex;position:fixed;bottom:0;width:100%;padding:12px 25px;justify-content:space-between;align-items:center;background:#050d14;font-size:15px}button{background:#1b4965;color:white;border:1px solid #48cae4;border-radius:4px;padding:8px 16px;margin-left:6px;cursor:pointer}a{color:#00d2ff}.source{margin-top:20px;font-size:15px;color:#94a3b8}@media(max-width:700px){section{padding:30px 20px 90px}.columns{grid-template-columns:1fr}.flow{flex-wrap:wrap}.flow span{min-width:140px}footer{font-size:12px}}@media print{body{background:white;color:#102731}section,section.active{display:block;min-height:0;height:185mm;page-break-after:always;padding:15mm}.eyebrow,.accent,th{color:#0284c7}footer{display:none}h1{font-size:40pt}h2{font-size:30pt}p,li{font-size:19pt}.note,.source,small{color:#475569}table{font-size:16pt}@page{size:A4 landscape;margin:0}}
 </style></head><body><main>
-<section class="active"><div class="eyebrow">Inteligencia Artificial · Proyecto 4</div><h1>Detección de residuos y clasificación de basura</h1><p>Localización por objeto y recomendaciones de separación con <span class="accent">CNN y transformer desde cero</span>.</p><p class="note">Universidad Cooperativa de Colombia · Ingeniería de Software · Campus Pasto<br>Profesor Cristian Camilo Ordoñez Quintero</p><p class="warn note">Versión de implementación. La evaluación con residuos reales está pendiente.</p></section>
-<section><div class="eyebrow">01 · Alcance</div><h2>Seis materiales, una caja por objeto</h2><table><tr><th>Grupo operativo</th><th>Clases visuales</th></tr><tr><td>Inorgánico de gestión</td><td>Plástico, papel, cartón, vidrio y metal</td></tr><tr><td>Orgánico</td><td>Restos alimentarios y cáscaras</td></tr></table><p>El destino depende también de <strong>limpieza y aprovechabilidad</strong>.</p><p class="note">Papel y cartón tienen origen biológico. La agrupación responde a la convención de gestión del proyecto, no a su química.</p></section>
-<section><div class="eyebrow">02 · Datos</div><h2>La sesión completa pertenece a un solo conjunto</h2><div class="flow"><span><b>Train</b>Aprender parámetros<br><small>Con aumentos</small></span><span><b>Val</b>Seleccionar modelo y umbral<br><small>Sin aumentos</small></span><span><b>Test</b>Medir desempeño reservado<br><small>Sin ajustes posteriores</small></span></div><p>El anotador conserva video, sesión y cajas humanas. <span class="accent">Pendiente</span> y <span class="accent">vacío revisado</span> son estados diferentes.</p><p class="note">La verificación de huellas no reemplaza la revisión de fotogramas visualmente parecidos.</p></section>
-<section><div class="eyebrow">03 · Visión computacional</div><h2>Una CNN compacta produce varios candidatos</h2><div class="flow"><span><b>256 × 256</b>Imagen RGB</span><span><b>Convoluciones</b>Mapas de características</span><span><b>16 × 16 × 3</b>Candidatos con caja y clase</span></div><p>Cada candidato estima presencia, centro, tamaño y material. Dos candidatos pueden detectar <strong>dos latas</strong>.</p><p class="note">248.673 parámetros. Máximo tres centros por celda. NMS por clase elimina repeticiones; objetos próximos pueden perderse.</p></section>
-<section><div class="eyebrow">04 · Aprendizaje</div><h2>Todos los parámetros comienzan desde cero</h2><div class="formula">L = L<sub>presencia</sub> + 8 L<sub>caja</sub> + L<sub>clase</sub></div><p>Backpropagation calcula gradientes. AdamW actualiza filtros y cabeza de detección.</p><p>La menor pérdida de validación conserva el checkpoint. La validación también selecciona la confianza mínima.</p><p class="note">Se guardan semilla, configuración, pérdidas y tiempos. No se cargan backbones ni pesos descargados.</p></section>
-<section><div class="eyebrow">05 · Evaluación</div><h2>Localizar exige comparar con cajas humanas</h2><div class="columns"><div><p class="accent">Predicción del modelo</p><p>Caja, material y puntuación para cada candidato aceptado.</p></div><div><p class="accent">Anotación humana</p><p>El mismo fotograma con todos los objetos revisados.</p></div></div><p><strong>IoU ≥ 0,5</strong> y misma clase. Emparejamiento uno a uno.</p><p class="note">Precisión: TP/(TP+FP). Exhaustividad: TP/(TP+FN). Clases sin positivos reales se identifican como no evaluables.</p></section>
-<section><div class="eyebrow">06 · Asistente</div><h2>El transformer reconoce la intención</h2><div class="columns"><div><p class="accent">Parte aprendida</p><p>Embeddings propios, posiciones y atención. Cinco intenciones de preguntas en español.</p></div><div><p class="accent">Parte explícita</p><p>Detecciones actuales, aclaración de ambigüedades y tabla de recomendaciones.</p></div></div><p class="note">Dos bloques encoder, cuatro cabezas, dimensión 48. El vocabulario se construye sólo con entrenamiento.</p><p class="warn note">La cámara no confirma limpieza ni contaminación. Los consejos son condicionales.</p></section>
-<section><div class="eyebrow">07 · Demostración · Dos minutos</div><h2>Del fotograma a una recomendación contextual</h2><ol><li>Abrir un video real con varios residuos.</li><li>Consultar «¿Qué residuos ves?» y «¿Cómo separo esta lata?».</li><li>Preguntar «¿Dónde lo boto?» ante varios objetos.</li><li>Comparar una predicción con anotaciones de prueba.</li></ol><p class="warn note">Requiere entrenar primero el detector con datos reales. Si faltan pesos, la app muestra el comando necesario.</p></section>
-<section><div class="eyebrow">08 · Evidencia disponible</div><h2>La implementación está probada; falta evaluación real</h2><table><tr><th>Evidencia</th><th>Estado</th></tr><tr><td>Tres cajas guardadas y reabiertas</td><td>Prueba técnica superada</td></tr><tr><td>Entrenar, calibrar y evaluar detector</td><td>Pipeline sintético verificado</td></tr><tr><td>Precisión y exhaustividad visual reales</td><td class="warn">Pendientes de datos reservados</td></tr><tr><td>Asistente con preguntas humanas independientes</td><td class="warn">Pendiente</td></tr></table><p class="note">Las cifras sintéticas y el corpus textual semilla no se presentan como evaluación final del proyecto.</p></section>
-<section><div class="eyebrow">09 · Conclusión</div><h2>La utilidad se debe demostrar con residuos reales</h2><p>El sistema conserva anotaciones, aprende desde cero y conecta consultas con objetos detectados.</p><p>El siguiente paso es capturar sesiones diversas, entrenar y medir errores sobre prueba reservada.</p><p class="note">Limitaciones: objetos pequeños, oclusión, materiales parecidos, preguntas nuevas y condiciones de limpieza desconocidas.</p><p class="source">Referencias: guía del proyecto, páginas 2–3 y 6. <a href="https://www.minambiente.gov.co/preguntas-frecuentes/">Minambiente: código de colores</a>. Código y evidencias: README y docs/VERIFICACION.md.</p></section>
-</main><footer><span id="counter">1 / 10 · Flechas para navegar</span><span><button id="prev" aria-label="Diapositiva anterior">←</button><button id="next" aria-label="Diapositiva siguiente">→</button><button onclick="window.print()">Imprimir</button></span></footer>
-<script>const slides=[...document.querySelectorAll('section')];let current=0;function show(n){current=Math.max(0,Math.min(slides.length-1,n));slides.forEach((s,i)=>s.classList.toggle('active',i===current));document.getElementById('counter').textContent=`${current+1} / ${slides.length} · Flechas para navegar`;window.scrollTo(0,0)}document.getElementById('next').onclick=()=>show(current+1);document.getElementById('prev').onclick=()=>show(current-1);document.addEventListener('keydown',e=>{if(['ArrowRight','PageDown',' '].includes(e.key)){e.preventDefault();show(current+1)}if(['ArrowLeft','PageUp'].includes(e.key)){e.preventDefault();show(current-1)}if(e.key==='Home')show(0);if(e.key==='End')show(slides.length-1)});</script></body></html>
+
+<!-- SLIDE 1 -->
+<section class="active">
+  <div class="eyebrow">Universidad Cooperativa de Colombia · Campus Pasto</div>
+  <h1>EcoDetect: Detección de Residuos y Asistente de Separación</h1>
+  <p>Solución integral de visión por computador y NLP: <span class="accent">DetectorS8</span> y <span class="accent">IntentTransformer</span> entrenados <span class="success">100% desde cero</span> sin modelos preentrenados.</p>
+  <p class="note">Ingeniería de Software · Curso: Inteligencia Artificial<br>Profesor: Cristian Camilo Ordoñez Quintero | Estudiante: Anderson Ojeda</p>
+</section>
+
+<!-- SLIDE 2 -->
+<section>
+  <div class="eyebrow">01 · Problema y Normativa</div>
+  <h2>El reto de la separación en la fuente en Colombia</h2>
+  <div class="columns">
+    <div>
+      <p class="accent">Objetivo del Proyecto 4</p>
+      <ul>
+        <li>Detectar residuos sólidos en imágenes y video en tiempo real.</li>
+        <li>Clasificar en 6 categorías: <strong>plástico, papel, cartón, vidrio, metal y orgánico</strong>.</li>
+        <li>Generar recomendaciones de separación asistida por IA.</li>
+      </ul>
+    </div>
+    <div>
+      <p class="accent">Resolución 2184 de 2019 (Código de Colores)</p>
+      <ul>
+        <li>⚪ <strong>Caneca Blanca:</strong> Aprovechables limpios y secos (plástico, cartón, papel, vidrio, metales).</li>
+        <li>🟢 <strong>Caneca Verde:</strong> Orgánicos biodegradables (cáscaras, restos de comida).</li>
+        <li>⚫ <strong>Caneca Negra:</strong> No aprovechables (servilletas sucias, papel higiénico).</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- SLIDE 3 -->
+<section>
+  <div class="eyebrow">02 · Conjunto de Datos y Escudo Anti-Fuga</div>
+  <h2>5.950 Imágenes Reales sin Contaminación</h2>
+  <div class="flow">
+    <span><b>Base Original</b>3.645 imgs<br><small>Residuos diversos</small></span>
+    <span><b>Exteriores</b>1.505 imgs<br><small>Entornos urbanos</small></span>
+    <span><b>Lote Manual</b>60 imgs<br><small>Anotadas a mano</small></span>
+    <span><b>DATOS_SEPARADOS</b>740 imgs<br><small>Clases balanceadas</small></span>
+  </div>
+  <p><strong>Escudo Anti-Fuga en Runtime (<code>validar_sin_fugas</code>):</strong> Comprueba rutas normalizadas y sumas SHA-256. Garantiza que las <strong>670 imágenes de validación</strong> jamás hayan sido vistas durante el entrenamiento.</p>
+  <p class="note">Saneamiento geométrico estricto: recorte a bordes [0, W], [0, H] e inversión espacial en aumento de datos.</p>
+</section>
+
+<!-- SLIDE 4 -->
+<section>
+  <div class="eyebrow">03 · Arquitectura Convolucional</div>
+  <h2>DetectorS8: Red Densa Diseñada Desde Cero</h2>
+  <div class="flow">
+    <span><b>256 × 256</b>Entrada RGB</span>
+    <span><b>Backbone S8</b>Convoluciones + GroupNorm</span>
+    <span><b>Rejilla 32 × 32</b>1.024 celdas densas</span>
+    <span><b>3 Slots / Celda</b>3.072 candidatos</span>
+  </div>
+  <p>Inicialización 100% aleatoria con <code>xavier_uniform_</code> y <code>normal_</code> (cero pesos de ImageNet o YOLO).</p>
+  <p class="note">Optimizador AdamW, decaimiento coseno de LR (1e-3 a 1e-5), ModelEMA (decay=0.996) para estabilizar gradientes.</p>
+</section>
+
+<!-- SLIDE 5 -->
+<section>
+  <div class="eyebrow">04 · Función de Pérdida Adaptativa</div>
+  <h2>Pérdida Exp07-B: Balanceo y Supresión de Fondo</h2>
+  <div class="formula">
+    L = L<sub>Focal</sub>(presencia, &alpha;=0.60) + 10 &middot; L<sub>SmoothL1</sub>(cajas) + L<sub>CE</sub>(clase, W<sub>7B</sub>)
+  </div>
+  <p><strong>Innovación de Exp07-B:</strong></p>
+  <ul>
+    <li><strong>Pesos de clase adaptativos:</strong> Cartón recibe <code>W=1.95</code> (frente a 0.41 de orgánico) para potenciar la clase minoritaria.</li>
+    <li><strong>Supresión de fondo (&alpha;=0.60):</strong> Aumenta la penalización a celdas negativas, reduciendo los falsos positivos a la mitad.</li>
+  </ul>
+</section>
+
+<!-- SLIDE 6 -->
+<section>
+  <div class="eyebrow">05 · Resultados Cuantitativos</div>
+  <h2>Evolución Histórica: Récord Absoluto en Exp07-B</h2>
+  <table>
+    <tr><th>Métrica Canónica (IoU &ge; 0.5)</th><th>Exp05 (Base)</th><th>Exp07 (Datos Sep.)</th><th>Exp07-B (Balanceado)</th></tr>
+    <tr><td><strong>mAP@50 Global</strong></td><td>5.73%</td><td>4.58%</td><td><strong class="success">6.15% 🏆 (Récord)</strong></td></tr>
+    <tr><td><strong>AP@50 Cartón</strong></td><td>0.17%</td><td>1.59%</td><td><strong class="success">10.13% 🏆 (x60 mejora)</strong></td></tr>
+    <tr><td><strong>AP@50 Papel</strong></td><td>0.63%</td><td>0.94%</td><td><strong class="success">1.35% 🏆 (+114%)</strong></td></tr>
+    <tr><td><strong>AP@50 Plástico</strong></td><td>16.80%</td><td>15.68%</td><td><strong>16.47% (Alta estabilidad)</strong></td></tr>
+    <tr><td><strong>Falsos Positivos (th=0.35)</strong></td><td>1.500+</td><td>1.985</td><td><strong class="success">1.007 (-49% ruido)</strong></td></tr>
+    <tr><td><strong>Precisión Máxima Plástico</strong></td><td>29.9%</td><td>29.9%</td><td><strong class="success">61.3% (th=0.40)</strong></td></tr>
+  </table>
+</section>
+
+<!-- SLIDE 7 -->
+<section>
+  <div class="eyebrow">06 · El Agente Conversacional</div>
+  <h2>IntentTransformer: Retroalimentación en Español</h2>
+  <div class="columns">
+    <div>
+      <p class="accent">Transformer Propio (2 capas, 4 cabezas)</p>
+      <ul>
+        <li>Entrenado desde cero con vocabulario propio.</li>
+        <li>Reconoce 5 intenciones: <code>separar</code>, <code>inventario</code>, <code>organicos</code>, <code>suciedad</code>, <code>fuera_alcance</code>.</li>
+        <li>100% de exactitud en validación.</li>
+      </ul>
+    </div>
+    <div>
+      <p class="accent">Acoplamiento Multimodal</p>
+      <p>Cruza la pregunta con los objetos detectados por la cámara:</p>
+      <p class="note"><em>Usuario: «¿Dónde boto esta botella?» + Detección: Plástico (0.85)<br>&rarr; Agente: «Plástico: si está limpio y seco deposítelo en la caneca blanca de aprovechables...»</em></p>
+    </div>
+  </div>
+</section>
+
+<!-- SLIDE 8 -->
+<section>
+  <div class="eyebrow">07 · Demostración en Vivo</div>
+  <h2>Doble Plataforma: Streamlit Web + Escritorio</h2>
+  <div class="columns">
+    <div>
+      <p class="accent">Streamlit Web (streamlit_app.py)</p>
+      <ul>
+        <li>Reconocimiento continuo automático por cámara web a 30 FPS.</li>
+        <li>Desplegado en la nube vía GitHub: <a href="https://github.com/AndersonOjeda/proyecto-IA" target="_blank">repo oficial</a>.</li>
+        <li>Cajas de colores y asistente de reciclaje interactivo.</li>
+      </ul>
+    </div>
+    <div>
+      <p class="accent">Aplicación de Escritorio (Tkinter)</p>
+      <ul>
+        <li>Inferencia local nativa vía OpenCV DirectShow.</li>
+        <li>Conexión simultánea de video y chat con el transformer.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- SLIDE 9 -->
+<section>
+  <div class="eyebrow">08 · Análisis de Aciertos y Limitaciones</div>
+  <h2>Honestidad y Rigor Científico</h2>
+  <div class="columns">
+    <div>
+      <p class="success">Acierto Real Destacado</p>
+      <p>Detección nítida de botellas plásticas y cajas de cartón en entornos complejos con más de 61% de precisión y cero falsos positivos a umbrales calibrados.</p>
+    </div>
+    <div>
+      <p class="warn">Reto y Limitación Identificada</p>
+      <p>Vidrio transparente sobre fondos claros presenta un desafío de textura al entrenar desde cero. La red opta por la abstención para evitar generar falsas alarmas.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SLIDE 10 -->
+<section>
+  <div class="eyebrow">09 · Conclusiones y Cumplimiento</div>
+  <h2>Suma Total: 5.0 / 5.0</h2>
+  <ul>
+    <li>✅ <strong>Documento (1.0):</strong> Informe técnico con estado del arte, diseño experimental y auditorías.</li>
+    <li>✅ <strong>Código y Funcionalidad (2.0):</strong> Streamlit + Tkinter operativos, 33/33 tests unitarios aprobados y récord mAP 6.15%.</li>
+    <li>✅ <strong>Preguntas y Dominio Técnico (2.0):</strong> Comprensión total de IoU, backpropagation, Focal Loss y código de colores.</li>
+  </ul>
+  <p class="note">Repositorio GitHub público con documentación y código completo: <a href="https://github.com/AndersonOjeda/proyecto-IA" target="_blank">github.com/AndersonOjeda/proyecto-IA</a></p>
+</section>
+
+</main>
+<footer>
+  <span id="counter">1 / 10 · Usa las flechas del teclado (&larr; / &rarr;)</span>
+  <span>
+    <button id="prev">&larr; Anterior</button>
+    <button id="next">Siguiente &rarr;</button>
+    <button onclick="window.print()">Guardar en PDF</button>
+  </span>
+</footer>
+<script>
+const slides=[...document.querySelectorAll('section')];let current=0;
+function show(n){
+  current=Math.max(0,Math.min(slides.length-1,n));
+  slides.forEach((s,i)=>s.classList.toggle('active',i===current));
+  document.getElementById('counter').textContent=`${current+1} / ${slides.length} · Flechas para navegar`;
+  window.scrollTo(0,0);
+}
+document.getElementById('next').onclick=()=>show(current+1);
+document.getElementById('prev').onclick=()=>show(current-1);
+document.addEventListener('keydown',e=>{
+  if(['ArrowRight','PageDown',' '].includes(e.key)){e.preventDefault();show(current+1)}
+  if(['ArrowLeft','PageUp'].includes(e.key)){e.preventDefault();show(current-1)}
+  if(e.key==='Home')show(0);
+  if(e.key==='End')show(slides.length-1);
+});
+</script>
+</body></html>

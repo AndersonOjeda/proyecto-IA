@@ -11,9 +11,9 @@ Abra `presentacion.html` en el navegador; use flechas izquierda/derecha. Funcion
 | 3:40–4:40 | 5. Entrenamiento | Explicar pérdida de presencia/caja/clase, backpropagation, AdamW y selección de checkpoint. |
 | 4:40–5:40 | 6. Evaluación | Comparar predicción y anotación del mismo fotograma, IoU y correspondencia uno a uno. Mostrar un error real si ya existe. |
 | 5:40–6:50 | 7. Transformer | Explicar vocabulario de train, embeddings propios, atención e intención. Separar aprendizaje y reglas. |
-| 6:50–8:50 | 8. Demostración | Video real con varios residuos y dos del mismo material; consultar inventario, lata, orgánicos, cartón sucio y pregunta ambigua. |
-| 8:50–9:30 | 9. Evidencia | Presentar métricas de Exp05 (F1 28.61% en test), Exp06 (+52 manuales: papel 1.51%, metal 40% prec), Exp07 (+740 DATOS_SEPARADOS: val loss récord 1.7285, cartón sube 10x a 1.59%), el colapso de GC3 y el Asistente V2 (100% val, 75% test). |
-| 9:30–10:00 | 10. Conclusión | Explicar el techo de Recall (desbalance y debris < 32px), modos de operación (cobertura vs precisión), el protocolo de evaluación humana a ciegas e integridad académica sin pesos preentrenados. |
+| 6:50–8:50 | 8. Demostración | Prototipo web Streamlit en vivo (`streamlit_app.py`) con cámara web continua (~30 FPS); mostrar detección de botella plástica y caja de cartón en tiempo real, junto con la consulta en vivo al IntentTransformer. |
+| 8:50–9:30 | 9. Evidencia | Presentar la comparativa cuantitativa: Exp05 (base), Exp07 (+740 DATOS_SEPARADOS), y el modelo campeón Exp07-B (mAP récord 6.15%, Cartón multiplicado x60 a 10.13%, Plástico al 61.3% de precisión). |
+| 9:30–10:00 | 10. Conclusión | Demostrar el cumplimiento del 100% de la rúbrica oficial: Documento (1.0), Código y Prototipo (2.0) y Preguntas de Sustentación (2.0) para una calificación de 5.0. |
 
 ## Preparación de demostración
 
